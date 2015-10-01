@@ -45,10 +45,6 @@ static void usage(const char *argv0)
     exit(EXIT_FAILURE);
 }
 
-#if defined(QCOM_HARDWARE) && !defined(ENABLE_MULTIPLE_CLIENTS)
-#define ENABLE_MULTIPLE_CLIENTS
-#endif
-
 #ifdef ENABLE_MULTIPLE_CLIENTS
 extern char rild[MAX_SOCKET_NAME_LENGTH] __attribute__((weak));
 #endif
